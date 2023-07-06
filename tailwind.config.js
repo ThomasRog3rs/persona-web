@@ -9,6 +9,5 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
   ],
   plugins: [require("flowbite/plugin")],
-  darkMode: "media",
   theme: {},
 };

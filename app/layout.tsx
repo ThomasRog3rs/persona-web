@@ -5,7 +5,7 @@ import "./globals.css";
 const RootLayout: FC<PropsWithChildren> = function ({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="dark:bg-gray-900">
         <FlowbiteContext>{children}</FlowbiteContext>
       </body>
     </html>
