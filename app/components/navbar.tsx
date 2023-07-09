@@ -61,7 +61,7 @@ const Header: FC<Record<string, never>> = function () {
           <Navbar.Toggle />
           <DarkThemeToggle />
         </div>
-        <Navbar.Collapse>
+        {/* <Navbar.Collapse>
           <Navbar.Link href="/" active>
             Home
           </Navbar.Link>
@@ -69,7 +69,7 @@ const Header: FC<Record<string, never>> = function () {
           <Navbar.Link href="/">Services</Navbar.Link>
           <Navbar.Link href="/">Pricing</Navbar.Link>
           <Navbar.Link href="/">Contact</Navbar.Link>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Navbar>
     </header>
   );
