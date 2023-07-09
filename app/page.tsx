@@ -3,7 +3,6 @@
 import { Fragment, useEffect, useState } from "react";
 import Header from "./components/navbar";
 import PersonaCard from "./components/persona-card/persona-card";
-// import { SidebarProvider } from "./context/SidebarContext";
 import { Area, Persona } from "./types";
 
 export default function Index(): JSX.Element {
