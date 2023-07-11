@@ -4,14 +4,6 @@ import { Fragment, useEffect, useState } from 'react';
 import Header from '../../components/navbar';
 import { Persona } from '../../types';
 
-// async function getPersona(personaId: number) {
-//   const res = await fetch("http://localhost:3001/personas", {
-//     next: { revalidate: 10 },
-//   });
-//   const data = await res.json();
-//   return data[personaId - 1];
-// }
-
 export default function PersonaPage({ params }: any): JSX.Element {
   const [persona, setPersona] = useState<Persona | undefined>();
   const [notFound, setNotFound] = useState<Boolean>(false);
