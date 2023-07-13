@@ -1,6 +1,6 @@
-import { Navbar } from "flowbite-react";
-import Image from "next/image";
-import { FC } from "react";
+import { Navbar } from 'flowbite-react';
+import Image from 'next/image';
+import { FC } from 'react';
 
 const Header: FC<Record<string, never>> = function () {
   return (

@@ -1,6 +1,6 @@
-import { Card } from "flowbite-react";
-import Link from "next/link";
-import { PersonaCardProps } from "../../types";
+import { Card } from 'flowbite-react';
+import Link from 'next/link';
+import { PersonaCardProps } from '../../types';
 
 const PersonaCard: React.FC<PersonaCardProps> = ({
   persona,

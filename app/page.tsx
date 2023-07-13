@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Fragment, useEffect, useState } from "react";
-import Header from "./components/navbar";
-import PersonaCard from "./components/persona-card/persona-card";
-import { Area, Persona } from "./types";
+import { Fragment, useEffect, useState } from 'react';
+import Header from './components/navbar';
+import PersonaCard from './components/persona-card/persona-card';
+import { Area, Persona } from './types';
 
 export default function Index(): JSX.Element {
   return (
@@ -23,10 +23,10 @@ function HomePage(): JSX.Element {
   const [personas, setPersonas] = useState<Persona[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/areas")
+    fetch('http://localhost:3001/areas')
       .then((response) => response.json())
       .then((data) => setAreas(data));
-    fetch("http://localhost:3001/personas")
+    fetch('http://localhost:3001/personas')
       .then((res) => res.json())
       .then((data) => setPersonas(data));
   }, []);

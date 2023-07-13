@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Fragment } from "react";
-import Header from "../components/navbar";
+import { Fragment } from 'react';
+import Header from '../components/navbar';
 
 export default function Index(): JSX.Element {
   return (
