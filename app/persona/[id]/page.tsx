@@ -2,6 +2,7 @@
 import { Avatar } from 'flowbite-react';
 import { Fragment, useEffect, useState } from 'react';
 import Header from '../../components/navbar';
+import LoadingPage from '../../loading';
 import { Persona } from '../../types';
 
 export default function PersonaPage({ params }: any): JSX.Element {
@@ -10,7 +11,13 @@ export default function PersonaPage({ params }: any): JSX.Element {
 
   useEffect(() => {
     fetch('http://localhost:3001/personas')
-      .then((res) => res.json())
+      .then((res) => {
+        setTimeout(function () {
+          // function code goes here
+          console.log('test');
+        }, 10000);
+        return res.json();
+      })
       .then((data) => {
         let output = data[params.id - 1];
         console.log(output);
@@ -23,10 +30,20 @@ export default function PersonaPage({ params }: any): JSX.Element {
       });
   }, []);
 
+  if (persona === undefined) {
+    return (
+      <>
+        <Header />
+        <LoadingPage></LoadingPage>
+      </>
+    );
+  }
+
   return (
     <Fragment>
       <Header />
       <div className="flex dark:bg-gray-900">
+        {/* <Suspense fallback={<LoadingPage />}> */}
         <main className="order-2 mx-4 mt-4 mb-24 flex-[1_0_16rem]">
           {notFound ? (
             <h1>Not Found</h1>
@@ -81,9 +98,10 @@ export default function PersonaPage({ params }: any): JSX.Element {
               </div>
             </div>
           ) : (
-            <h1>Loading...</h1>
+            <h1></h1>
           )}
         </main>
+        {/* </Suspense> */}
       </div>
     </Fragment>
   );
