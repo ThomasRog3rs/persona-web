@@ -32,10 +32,10 @@ export default function PersonaPage({ params }: any): JSX.Element {
 
   if (persona === undefined) {
     return (
-      <>
+      <Fragment>
         <Header />
         <LoadingPage></LoadingPage>
-      </>
+      </Fragment>
     );
   }
 
@@ -101,7 +101,6 @@ export default function PersonaPage({ params }: any): JSX.Element {
             <h1></h1>
           )}
         </main>
-        {/* </Suspense> */}
       </div>
     </Fragment>
   );
