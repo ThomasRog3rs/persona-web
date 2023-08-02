@@ -51,6 +51,7 @@ export default function Index(): JSX.Element {
   );
 }
 
+//Should this be renamed?
 function HomePage({
   areas,
   personas,
