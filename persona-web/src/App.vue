@@ -11,6 +11,7 @@ import HelloWorld from './components/HelloWorld.vue';
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <main><router-view></router-view></main>
   <router-link to="/login">Login</router-link>
   <HelloWorld msg="Vite + Vue" />
 </template>
