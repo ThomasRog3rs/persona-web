@@ -1,6 +1,8 @@
 <template>
   <header>
-    <NavBar></NavBar>
+    <router-view name="navbar" v-if="$route.name !== 'Login'">
+      <NavBar></NavBar>
+    </router-view>
   </header>
   <main class="container mx-auto">
     <router-view></router-view>

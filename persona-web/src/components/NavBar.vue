@@ -5,7 +5,7 @@
     >
       <router-link to="/" class="flex items-center">
         <img
-          src="https://flowbite.com/docs/images/logo.svg"
+          src="https://preview.cruip.com/stellar/images/logo.svg"
           class="h-8 mr-3"
           alt="Flowbite Logo"
         />
