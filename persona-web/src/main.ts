@@ -5,11 +5,13 @@ import './style.css';
 import App from './App.vue';
 import Login from './pages/LoginPage.vue';
 import LandingPage from './pages/LandingPage.vue';
+import NotFound from './pages/NotFound.vue';
 
 const pinia = createPinia();
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
     { path: '/', name: 'Home', component: LandingPage },
     { path: '/login', name: 'Login', component: Login },
   ],
