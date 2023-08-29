@@ -74,33 +74,29 @@
     <div
       class="p-0 bg-transparent flex flex-col lg:flex-row lg:justify-between"
     >
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg shadow-lg my-3 lg:mx-3"
-      >
+      <div class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3">
         <img
           src="https://images.unsplash.com/photo-1569285645462-a3f9c6332d56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RG9uYWxkJTIwVHJ1bXB8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
           alt=""
-          class="rounded-t-lg"
+          class="rounded-lg"
         />
-        <div class="p-6 bg-transparent rounded-b-lg border">
+        <div class="py-6 bg-transparent rounded-b-lg">
           <h2 class="font-bold mb-2 text-2xl text-slate-400">Donald Trump</h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
             class="text-purple-600 hover:text-purple-500 underline text-sm"
-            >Read More 👉</a
+            >Chat now 👉</a
           >
         </div>
       </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg shadow-lg my-3 lg:mx-3"
-      >
+      <div class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3">
         <img
           src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
           alt=""
           class="rounded-t-lg"
         />
-        <div class="p-6 bg-transparent rounded-b-lg border">
+        <div class="py-6 bg-transparent rounded-lg">
           <h2 class="font-bold mb-2 text-2xl text-slate-400">
             King Henry VIII
           </h2>
@@ -112,15 +108,13 @@
           >
         </div>
       </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg shadow-lg my-3 lg:mx-3"
-      >
+      <div class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3">
         <img
           src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
           alt=""
           class="rounded-t-lg"
         />
-        <div class="p-6 bg-transparent rounded-b-lg border">
+        <div class="py-6 bg-transparent rounded-b-lg">
           <h2 class="font-bold mb-2 text-2xl text-slate-400">
             Card with an image
           </h2>
@@ -132,15 +126,13 @@
           >
         </div>
       </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg shadow-lg my-3 lg:mx-3"
-      >
+      <div class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3">
         <img
           src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
           alt=""
           class="rounded-t-lg"
         />
-        <div class="p-6 bg-transparent rounded-b-lg border">
+        <div class="py-6 bg-transparent rounded-b-lg">
           <h2 class="font-bold mb-2 text-2xl text-slate-400">
             Card with an image
           </h2>

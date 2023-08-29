@@ -35,7 +35,7 @@
             class="w-full px-4 py-2 text-white bg-primary rounded-lg"
             type="button"
           >
-            Sign in &rightarrow;
+            Sign In &rightarrow;
           </button>
         </div>
         <div class="text-sm flex justify-between">
