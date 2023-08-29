@@ -1,21 +1,15 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <main><router-view></router-view></main>
-  <router-link to="/login">Login</router-link>
-  <HelloWorld msg="Vite + Vue" />
+  <header>
+    <NavBar></NavBar>
+  </header>
+  <main class="container mx-auto">
+    <router-view></router-view>
+  </main>
+  <footer></footer>
 </template>
-
+<script setup lang="ts">
+import NavBar from './components/NavBar.vue';
+</script>
 <style scoped>
 .logo {
   height: 6em;
