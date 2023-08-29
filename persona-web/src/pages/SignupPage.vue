@@ -13,7 +13,7 @@
         </router-link>
       </div>
       <h1 class="mb-3 font-bold text-center text-[2.75rem] text-slate-50">
-        Sign in to your account
+        Create your free account
       </h1>
       <div class="w-[400px] m-auto">
         <label class="block mb-4">
@@ -35,18 +35,14 @@
             class="w-full px-4 py-2 text-white bg-primary rounded-lg"
             type="button"
           >
-            Sign in &rightarrow;
+            Sign Up &rightarrow;
           </button>
         </div>
-        <div class="text-sm flex justify-between">
-          <router-link to="/signup" class="text-primary hover:text-violet-700"
-            >Create new account</router-link
-          >
-          <div>/</div>
-          <router-link
-            to="/password-reset"
-            class="text-primary hover:text-violet-700"
-            >Forgot your password?</router-link
+        <div class="text-sm text-center">
+          <span>Already have an account?</span>
+          &VeryThinSpace;
+          <router-link to="/login" class="text-primary hover:text-violet-700"
+            >Login</router-link
           >
         </div>
       </div>
