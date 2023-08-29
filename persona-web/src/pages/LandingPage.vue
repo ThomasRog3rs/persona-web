@@ -29,6 +29,7 @@
     >
       <div
         class="w-full lg:w-1/4 bg-transparent p-6 rounded-lg shadow-lg border-2 border-dashed my-3 lg:mx-3"
+        style="filter: drop-shadow(0 0 2em #000dff)"
       >
         <h2 class="text-2xl font-bold mb-2 text-gray-200">
           Craft Your Chatbot
