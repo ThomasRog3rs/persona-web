@@ -8,4 +8,8 @@
     color: white;
     @apply bg-[#111827];
   }
+  ::selection {
+    background: #7c3aed;
+    color: white;
+  }
 }
