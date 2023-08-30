@@ -82,11 +82,11 @@
           class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-b-lg">
-          <h2 class="font-bold mb-2 text-2xl text-slate-400">Donald Trump</h2>
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">Donald Trump</h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
-            class="text-purple-600 hover:text-purple-500 underline text-sm"
+            class="text-purple-500 hover:text-purple-400 underline text-sm"
             >Chat now 👉</a
           >
         </div>
@@ -95,16 +95,14 @@
         <img
           src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
           alt=""
-          class="rounded-t-lg"
+          class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-lg">
-          <h2 class="font-bold mb-2 text-2xl text-slate-400">
-            King Henry VIII
-          </h2>
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">King Henry VIII</h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
-            class="text-purple-600 hover:text-purple-500 underline text-sm"
+            class="text-purple-500 hover:text-purple-400 underline text-sm"
             >Chat now 👉</a
           >
         </div>
@@ -113,16 +111,16 @@
         <img
           src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
           alt=""
-          class="rounded-t-lg"
+          class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-b-lg">
-          <h2 class="font-bold mb-2 text-2xl text-slate-400">
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">
             Card with an image
           </h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
-            class="text-purple-600 hover:text-purple-500 underline text-sm"
+            class="text-purple-500 hover:text-purple-400 underline text-sm"
             >Chat now 👉</a
           >
         </div>
@@ -131,16 +129,16 @@
         <img
           src="https://images.unsplash.com/photo-1600054800747-be294a6a0d26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
           alt=""
-          class="rounded-t-lg"
+          class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-b-lg">
-          <h2 class="font-bold mb-2 text-2xl text-slate-400">
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">
             Card with an image
           </h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
-            class="text-purple-600 hover:text-purple-500 underline text-sm"
+            class="text-purple-500 hover:text-purple-400 underline text-sm"
             >Chat now 👉</a
           >
         </div>
