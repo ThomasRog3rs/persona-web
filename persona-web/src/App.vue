@@ -1,4 +1,9 @@
 <template>
+  <DefaultLayout> <router-view /> </DefaultLayout>
+  <DashboardLayout><router-view /></DashboardLayout>
+  <component :is="layout">
+    <router-view />
+  </component>
   <header>
     <router-view
       name="navbar"
@@ -23,6 +28,23 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import DefaultLayout from './layouts/DefaultLayout.vue';
+import DashboardLayout from './layouts/DashboardLayout.vue';
+
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const layout = computed(() => {
+  const layout = route?.meta?.layout;
+  console.log(layout);
+  if (layout) {
+    console.log(`${layout}-Layout`);
+    return `${layout}-Layout`;
+  }
+  return 'div';
+});
 </script>
 <style scoped>
 .logo {

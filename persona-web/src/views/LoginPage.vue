@@ -40,13 +40,15 @@
           </router-link>
         </div>
         <div class="text-sm flex justify-between">
-          <router-link to="/signup" class="text-primary hover:text-violet-700"
+          <router-link
+            to="/signup"
+            class="text-primary-light hover:text-violet-700"
             >Create new account</router-link
           >
           <div>/</div>
           <router-link
             to="/password-reset"
-            class="text-primary hover:text-violet-700"
+            class="text-primary-light hover:text-violet-700"
             >Forgot your password?</router-link
           >
         </div>

@@ -10,6 +10,9 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Home',
     component: () => import('../views/LandingPage.vue'),
+    meta: {
+      layout: 'Default',
+    },
   },
   {
     path: '/login',
@@ -25,6 +28,9 @@ const routes: Array<RouteRecordRaw> = [
     path: '/chat',
     name: 'Chat',
     component: () => import('../views/ChatPage.vue'),
+    meta: {
+      layout: 'Dashboard',
+    },
   },
 ];
 

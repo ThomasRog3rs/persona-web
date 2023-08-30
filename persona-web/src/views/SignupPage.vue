@@ -41,7 +41,9 @@
         <div class="text-sm text-center">
           <span>Already have an account?</span>
           &VeryThinSpace;
-          <router-link to="/login" class="text-primary hover:text-violet-700"
+          <router-link
+            to="/login"
+            class="text-primary-light hover:text-violet-700"
             >Login</router-link
           >
         </div>
