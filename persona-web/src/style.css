@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    /* @apply bg-[#0f0e1c]; */
     color: white;
     @apply bg-[#111827];
   }
