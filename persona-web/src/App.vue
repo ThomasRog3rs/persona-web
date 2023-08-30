@@ -2,7 +2,11 @@
   <header>
     <router-view
       name="navbar"
-      v-if="$route.name !== 'Login' && $route.name !== 'Signup'"
+      v-if="
+        $route.name !== 'Login' &&
+        $route.name !== 'Signup' &&
+        $route.name !== 'Chat'
+      "
     >
       <NavBar></NavBar>
     </router-view>

@@ -7,6 +7,7 @@ import Login from './pages/LoginPage.vue';
 import LandingPage from './pages/LandingPage.vue';
 import NotFound from './pages/NotFound.vue';
 import Signup from './pages/SignupPage.vue';
+import ChatPage from './pages/ChatPage.vue';
 
 const pinia = createPinia();
 const router = createRouter({
@@ -16,6 +17,7 @@ const router = createRouter({
     { path: '/', name: 'Home', component: LandingPage },
     { path: '/login', name: 'Login', component: Login },
     { path: '/signup', name: 'Signup', component: Signup },
+    { path: '/chat', name: 'Chat', component: ChatPage },
   ],
 });
 

@@ -7,7 +7,7 @@
           <img
             src="https://preview.cruip.com/stellar/images/logo.svg"
             alt="Logo"
-            class="m-auto"
+            class="m-auto form-box"
             width="50"
           />
         </router-link>
@@ -31,12 +31,13 @@
           />
         </label>
         <div class="mb-10">
-          <button
-            class="w-full px-4 py-2 text-white bg-primary rounded-lg"
+          <router-link
+            to="/chat"
+            class="w-full px-4 py-2 text-white bg-primary rounded-lg text-center"
             type="button"
           >
             Sign In &rightarrow;
-          </button>
+          </router-link>
         </div>
         <div class="text-sm flex justify-between">
           <router-link to="/signup" class="text-primary hover:text-violet-700"
@@ -55,3 +56,9 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style>
+.form-box {
+  filter: drop-shadow(0rem 0 1em #ffffff5d);
+}
+</style>
