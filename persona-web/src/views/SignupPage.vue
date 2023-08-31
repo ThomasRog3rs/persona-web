@@ -7,13 +7,13 @@
           <img
             src="https://preview.cruip.com/stellar/images/logo.svg"
             alt="Logo"
-            class="m-auto form-box"
+            class="m-auto"
             width="50"
           />
         </router-link>
       </div>
       <h1 class="mb-3 font-bold text-center text-[2.75rem] text-slate-50">
-        Sign in to your account
+        Create your free account
       </h1>
       <div class="w-[400px] m-auto">
         <label class="block mb-4">
@@ -31,23 +31,20 @@
           />
         </label>
         <div class="mb-10">
-          <router-link
-            to="/chat"
-            class="w-full px-4 py-2 text-white bg-primary rounded-lg text-center"
+          <button
+            class="w-full px-4 py-2 text-white bg-primary rounded-lg"
             type="button"
           >
-            Sign In &rightarrow;
-          </router-link>
+            Sign Up &rightarrow;
+          </button>
         </div>
-        <div class="text-sm flex justify-between">
-          <router-link to="/signup" class="text-primary hover:text-violet-700"
-            >Create new account</router-link
-          >
-          <div>/</div>
+        <div class="text-sm text-center">
+          <span>Already have an account?</span>
+          &VeryThinSpace;
           <router-link
-            to="/password-reset"
-            class="text-primary hover:text-violet-700"
-            >Forgot your password?</router-link
+            to="/login"
+            class="text-primary-light hover:text-violet-700"
+            >Login</router-link
           >
         </div>
       </div>
@@ -56,9 +53,3 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style>
-.form-box {
-  filter: drop-shadow(0rem 0 1em #ffffff5d);
-}
-</style>
