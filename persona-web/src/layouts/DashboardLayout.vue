@@ -1,10 +1,14 @@
 <template>
-  <v-layout>
-    <v-main>
-      <h1>THIS IS THE Dashboard LAYOUT</h1>
-      <slot></slot>
-    </v-main>
-  </v-layout>
+  <header>
+    <AuthNavBar></AuthNavBar>
+  </header>
+  <main class="mx-auto">
+    <router-view></router-view>
+  </main>
+  <Footer></Footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AuthNavBar from '../components/AuthNavBar.vue';
+import Footer from '../components/Footer.vue';
+</script>

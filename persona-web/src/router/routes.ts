@@ -1,17 +1,23 @@
 import { RouteRecordRaw } from 'vue-router';
 
+import DefaultLayout from '../layouts/DefaultLayout.vue';
+import DashboardLayout from '../layouts/DashboardLayout.vue';
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('../views/NotFound.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
   },
   {
     path: '/',
     name: 'Home',
     component: () => import('../views/LandingPage.vue'),
     meta: {
-      layout: 'Default',
+      layout: DefaultLayout,
     },
   },
   {
@@ -29,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Chat',
     component: () => import('../views/ChatPage.vue'),
     meta: {
-      layout: 'Dashboard',
+      layout: DashboardLayout,
     },
   },
 ];

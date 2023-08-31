@@ -1,10 +1,14 @@
 <template>
-  <v-layout>
-    <v-main>
-      <h1 class="text-xl text-primary">THIS IS THE DEFAULT LAYOUT</h1>
-      <slot></slot>
-    </v-main>
-  </v-layout>
+  <header>
+    <NavBar></NavBar>
+  </header>
+  <main class="container mx-auto">
+    <router-view></router-view>
+  </main>
+  <Footer></Footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavBar from '../components/NavBar.vue';
+import Footer from '../components/Footer.vue';
+</script>
