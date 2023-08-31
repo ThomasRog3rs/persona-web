@@ -7,7 +7,7 @@
           <img
             src="https://preview.cruip.com/stellar/images/logo.svg"
             alt="Logo"
-            class="m-auto"
+            class="m-auto form-logo"
             width="50"
           />
         </router-link>
@@ -53,3 +53,9 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style>
+.form-logo {
+  filter: drop-shadow(0rem 0 1em #ffffff5d);
+}
+</style>

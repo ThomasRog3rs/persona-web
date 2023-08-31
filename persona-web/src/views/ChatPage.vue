@@ -1,8 +1,8 @@
 <template>
-  <div class="min-w-full border-b border-t lg:grid lg:grid-cols-3">
-    <div class="border-r border-gray-300 lg:col-span-1">
+  <div class="bg-[#1d2840] min-w-full lg:grid lg:grid-cols-3">
+    <div class="lg:col-span-1">
       <div class="mx-3 my-3">
-        <div class="relative text-gray-600">
+        <div class="relative text-gray-200">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2">
             <svg
               fill="none"
@@ -27,10 +27,10 @@
       </div>
 
       <ul class="overflow-auto h-[32rem]">
-        <h2 class="my-2 mb-2 ml-2 text-lg text-gray-600">Chats</h2>
+        <h2 class="my-2 mb-2 ml-2 text-lg text-gray-200">Chats</h2>
         <li>
           <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none"
+            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer hover:bg-primary-light focus:outline-none"
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
@@ -39,16 +39,16 @@
             />
             <div class="w-full pb-2">
               <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600"
-                  >Jhon Don</span
+                <span class="block ml-2 font-semibold text-gray-200"
+                  >John Doe</span
                 >
-                <span class="block ml-2 text-sm text-gray-600">25 minutes</span>
+                <span class="block ml-2 text-sm text-gray-200">25 minutes</span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">bye</span>
+              <span class="block ml-2 text-sm text-gray-200">bye</span>
             </div>
           </a>
           <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none"
+            class="flex items-center px-3 py-2 text-sm transition hover:bg-primary-light duration-150 ease-in-out bg-primary cursor-pointer focus:outline-none"
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
@@ -57,14 +57,14 @@
             />
             <div class="w-full pb-2">
               <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600">Same</span>
-                <span class="block ml-2 text-sm text-gray-600">50 minutes</span>
+                <span class="block ml-2 font-semibold text-gray-200">Sam</span>
+                <span class="block ml-2 text-sm text-gray-200">50 minutes</span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">Good night</span>
+              <span class="block ml-2 text-sm text-gray-200">Good night</span>
             </div>
           </a>
           <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none"
+            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer hover:bg-primary-light focus:outline-none"
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
@@ -73,30 +73,30 @@
             />
             <div class="w-full pb-2">
               <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600">Emma</span>
-                <span class="block ml-2 text-sm text-gray-600">6 hour</span>
+                <span class="block ml-2 font-semibold text-gray-200">Emma</span>
+                <span class="block ml-2 text-sm text-gray-200">6 hour</span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">Good Morning</span>
+              <span class="block ml-2 text-sm text-gray-200">Good Morning</span>
             </div>
           </a>
         </li>
       </ul>
     </div>
     <div class="hidden lg:col-span-2 lg:block">
-      <div class="w-full">
+      <div class="w-full bg-[#172034]">
         <div class="relative flex items-center p-3 border-b border-gray-300">
           <img
             class="object-cover w-10 h-10 rounded-full"
             src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
             alt="username"
           />
-          <span class="block ml-2 font-bold text-gray-600">Emma</span>
+          <span class="block ml-2 font-bold text-gray-200">Emma</span>
           <span
             class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"
           >
           </span>
         </div>
-        <div class="relative w-full p-6 overflow-y-auto h-[40rem]">
+        <div class="relative w-full p-6 overflow-y-auto h-[40rem] scroll-bar">
           <ul class="space-y-2">
             <li class="flex justify-start">
               <div
@@ -156,13 +156,11 @@
           </ul>
         </div>
 
-        <div
-          class="flex items-center justify-between w-full p-3 border-t border-gray-300"
-        >
+        <div class="flex items-center justify-between w-full p-3 bg-[#111827]">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6 text-gray-500"
+              class="w-6 h-6 text-gray-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -178,7 +176,7 @@
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 text-gray-500"
+              class="w-5 h-5 text-gray-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -202,7 +200,7 @@
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 text-gray-500"
+              class="w-5 h-5 text-gray-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -217,7 +215,7 @@
           </button>
           <button type="submit">
             <svg
-              class="w-5 h-5 text-gray-500 origin-center transform rotate-90"
+              class="w-5 h-5 text-gray-200 origin-center transform rotate-90"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -234,3 +232,27 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style>
+.scroll-bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #8b5cf6),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, #7c3aed)
+  );
+}
+</style>
