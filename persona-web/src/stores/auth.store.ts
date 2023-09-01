@@ -8,6 +8,12 @@ export const useAuthStore = defineStore('authStore', {
     returnUrl: null,
   }),
   actions: {
+    async register(email: string, password: string) {
+      const res = await axios.post('https://localhost:51148/Account/sign-in', {
+        email,
+        password,
+      });
+    },
     async login(email: string, password: string) {
       const user = await axios.post('https://localhost:51148/Account/sign-in', {
         email,
