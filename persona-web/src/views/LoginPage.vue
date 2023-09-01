@@ -96,6 +96,12 @@
 import * as Yup from 'yup';
 import { Form, Field } from 'vee-validate';
 import { useAuthStore } from '../stores/auth.store';
+import router from '../router';
+
+const authStore = useAuthStore();
+if (authStore.user != null) {
+  router.push('/chat');
+}
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -105,7 +111,6 @@ const schema = Yup.object().shape({
 });
 
 const onSubmit = async (values: any, { setErrors }) => {
-  const authStore = useAuthStore();
   const { email, password } = values;
 
   try {

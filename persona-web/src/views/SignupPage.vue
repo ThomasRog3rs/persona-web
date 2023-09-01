@@ -52,7 +52,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAuthStore } from '../stores/auth.store';
+import router from '../router';
+const authStore = useAuthStore();
+if (authStore.user != null) {
+  router.push('/chat');
+}
+</script>
 
 <style>
 .form-logo {

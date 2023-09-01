@@ -183,7 +183,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import router from '../router';
+import { useAuthStore } from '../stores/auth.store';
+const authStore = useAuthStore();
+
+if (authStore.user == null) {
+  router.push('/login');
+}
+</script>
 
 <style>
 .scroll-bar::-webkit-scrollbar-track {
