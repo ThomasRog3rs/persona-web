@@ -15,29 +15,64 @@
       <h1 class="mb-3 font-bold text-center text-[2.75rem] text-slate-50">
         Sign in to your account
       </h1>
-      <div class="w-[400px] m-auto">
+      <Form
+        @submit="onSubmit"
+        :validation-schema="schema"
+        v-slot="{ errors, isSubmitting }"
+        class="w-[400px] m-auto"
+      >
+        <div
+          v-if="errors.apiError"
+          class="mb-4 mt-4 py-2 px-3 border border-red-500 rounded bg-red-400"
+        >
+          {{ errors.apiError }}
+        </div>
         <label class="block mb-4">
           <div class="mb-1 text-grey-darkest">Email</div>
-          <input
+          <field
+            name="email"
+            type="email"
             class="w-full py-2 px-3 bg-transparent border rounded outline-none focus:border-blue-light focus:shadow-outline"
-            type="text"
-          />
+          ></field>
+          <div
+            v-show="errors.email"
+            class="mt-2 py-2 px-3 border border-red-500 rounded bg-red-400"
+          >
+            {{ errors.email }}
+          </div>
         </label>
         <label class="block mb-5">
           <div class="mb-1 text-grey-darkest">Password</div>
-          <input
-            class="w-full py-2 px-3 bg-transparent border rounded outline-none focus:border-blue-light focus:shadow-outline"
+          <field
+            name="password"
             type="password"
-          />
+            class="w-full py-2 px-3 bg-transparent border rounded outline-none focus:border-blue-light focus:shadow-outline"
+          ></field>
+          <div
+            v-show="errors.password"
+            class="mt-2 py-2 px-3 border border-red-500 rounded bg-red-400"
+          >
+            {{ errors.password }}
+          </div>
         </label>
         <div class="mb-10">
-          <router-link
-            to="/chat"
+          <button
             class="w-full px-4 py-2 text-white bg-primary rounded-lg text-center"
-            type="button"
+            type="submit"
+            :disabled="isSubmitting"
           >
-            Sign In &rightarrow;
-          </router-link>
+            <div
+              v-show="isSubmitting"
+              class="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status"
+            >
+              <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Loading...</span
+              >
+            </div>
+            <span v-show="!isSubmitting">Sign In &rightarrow;</span>
+          </button>
         </div>
         <div class="text-sm flex justify-between">
           <router-link
@@ -52,12 +87,37 @@
             >Forgot your password?</router-link
           >
         </div>
-      </div>
+      </Form>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import * as Yup from 'yup';
+import { Form, Field } from 'vee-validate';
+import { useAuthStore } from '../stores/auth.store';
+
+const schema = Yup.object().shape({
+  email: Yup.string()
+    .email('Please enter a valid email')
+    .required('Email is required'),
+  password: Yup.string().required('Password is required'),
+});
+
+const onSubmit = async (values: any, { setErrors }) => {
+  const authStore = useAuthStore();
+  const { email, password } = values;
+
+  try {
+    return await authStore.login(email, password);
+  } catch (errors) {
+    console.log('error: ', errors);
+    setErrors({
+      apiError: 'Login Failed, email or password could be incorrect',
+    });
+  }
+};
+</script>
 
 <style>
 .form-logo {
