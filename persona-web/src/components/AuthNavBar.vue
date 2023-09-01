@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-transparent">
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-full px-4">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
@@ -17,29 +17,29 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 href="#"
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 aria-current="page"
-                >Dashboard</a
+                >Home</a
+              >
+              <a
+                href="#"
+                class="bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Chats</a
               >
               <a
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Team</a
+                >Communites</a
               >
               <a
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Projects</a
+                >Personas</a
               >
               <a
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Calendar</a
-              >
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Reports</a
+                >Account</a
               >
             </div>
           </div>

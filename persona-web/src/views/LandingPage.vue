@@ -114,9 +114,7 @@
           class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-b-lg">
-          <h2 class="font-bold mb-2 text-2xl text-gray-200">
-            Card with an image
-          </h2>
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">Example</h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
@@ -132,9 +130,7 @@
           class="rounded-lg"
         />
         <div class="py-6 bg-transparent rounded-b-lg">
-          <h2 class="font-bold mb-2 text-2xl text-gray-200">
-            Card with an image
-          </h2>
+          <h2 class="font-bold mb-2 text-2xl text-gray-200">Example</h2>
           <p class="text-slate-600 mb-2"></p>
           <a
             href="#"
