@@ -23,6 +23,7 @@
       Create a free account
     </router-link>
   </section>
+
   <section id="about">
     <div
       class="p-0 bg-transparent flex flex-col lg:flex-row lg:justify-between"
