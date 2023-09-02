@@ -115,10 +115,10 @@ const onSubmit = async (values: any, { setErrors }) => {
 
   try {
     return await authStore.register(email, password);
-  } catch (errors) {
-    console.log('error: ', errors);
+  } catch (error: any) {
+    console.log('error: ', error);
     setErrors({
-      apiError: 'Sign up failed, please try again later',
+      apiError: `Sign up failed: ${error.message}`,
     });
   }
 };

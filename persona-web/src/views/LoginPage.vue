@@ -115,10 +115,10 @@ const onSubmit = async (values: any, { setErrors }) => {
 
   try {
     return await authStore.login(email, password);
-  } catch (errors) {
-    console.log('error: ', errors);
+  } catch (error: any) {
+    console.log('error: ', error);
     setErrors({
-      apiError: 'Login Failed, email or password could be incorrect',
+      apiError: `Login Failed: ${error?.message} `,
     });
   }
 };
