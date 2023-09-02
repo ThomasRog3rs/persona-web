@@ -52,6 +52,9 @@
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
+            <div class="text-white text-sm font-thin px-4">
+              <p>Welcome, {{ userStore.userDetails?.email }}</p>
+            </div>
             <button
               type="button"
               class="text-white bg-primary hover:bg-primary-light focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-3 dark:bg-primary dark:hover:bg-primary-light"
@@ -285,7 +288,10 @@
 
 <script setup lang="ts">
 import { useAuthStore } from '../stores/auth.store';
+import { useUserStore } from '../stores/user.store';
 const authStore = useAuthStore();
+const userStore = useUserStore();
+
 const logout = () => {
   authStore.logout();
 };

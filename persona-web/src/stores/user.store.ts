@@ -1,16 +1,26 @@
 import { defineStore } from 'pinia';
 
-interface userInfo {
-  name: string;
+interface UserDetails {
+  createdAt: string;
   email: string;
-  jwt: string;
-  userId: number; //make this a GUID?
+  permissions: string[];
+  role: string;
+  state: string;
+  userId: string;
 }
 
-export const useUserAuthStore = defineStore('userAuthStore', {
+export const useUserStore = defineStore('userStore', {
   state: () => ({
-    loggedIn: false as boolean,
-    jwt: null, //read from localstorage
+    userDetails:
+      (JSON.parse(localStorage.getItem('user') as string)
+        ?.userDetails as UserDetails) ?? null,
   }),
-  actions: {},
+  actions: {
+    getUserDetails() {
+      this.userDetails =
+        (JSON.parse(localStorage.getItem('user') as string)
+          ?.userDetails as UserDetails) ?? null;
+      console.log(this.userDetails);
+    },
+  },
 });
