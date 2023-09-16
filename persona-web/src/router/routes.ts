@@ -38,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
       layout: DashboardLayout,
     },
   },
+  {
+    path: '/communities',
+    name: 'Chat',
+    component: () => import('../views/NotFound.vue'),
+  },
 ];
 
 export default routes;
