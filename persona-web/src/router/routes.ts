@@ -31,6 +31,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/SignupPage.vue'),
   },
   {
+    path: '/home',
+    name: 'Dashboard',
+    component: () => import('../views/HomePage.vue'),
+    meta: {
+      layout: DashboardLayout,
+    },
+  },
+  {
     path: '/chat',
     name: 'Chat',
     component: () => import('../views/ChatPage.vue'),
@@ -42,6 +50,9 @@ const routes: Array<RouteRecordRaw> = [
     path: '/communities',
     name: 'Communities',
     component: () => import('../views/NotFound.vue'),
+    meta: {
+      layout: DefaultLayout,
+    },
   },
 ];
 

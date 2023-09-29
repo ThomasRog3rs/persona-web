@@ -100,7 +100,7 @@ import router from '../router';
 
 const authStore = useAuthStore();
 if (authStore.user != null) {
-  router.push('/chat');
+  router.push('/home');
 }
 
 const schema = Yup.object().shape({

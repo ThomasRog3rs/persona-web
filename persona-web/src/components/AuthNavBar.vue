@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-transparent">
+  <nav class="bg-[#172034]">
     <div class="mx-auto max-w-full px-4">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
@@ -16,33 +16,71 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
-                href="#"
+                href="/home"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page"
+                :class="{
+                  'bg-gray-700 text-white':
+                    navigationStore.activeLink === '/home',
+                }"
+                :aria-current="
+                  navigationStore.activeLink === '/home' ? 'page' : undefined
+                "
                 >Home</a
               >
               <a
-                href="#"
-                class="bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium"
+                href="/chat"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                :class="{
+                  'bg-gray-700 text-white':
+                    navigationStore.activeLink === '/chat',
+                }"
+                :aria-current="
+                  navigationStore.activeLink === '/chat' ? 'page' : undefined
+                "
                 >Chats</a
               >
               <a
-                href="#"
+                href="/communities"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                :class="{
+                  'bg-gray-700 text-white':
+                    navigationStore.activeLink === '/communities',
+                }"
+                :aria-current="
+                  navigationStore.activeLink === '/communities'
+                    ? 'page'
+                    : undefined
+                "
                 >Communites</a
               >
               <a
-                href="#"
+                href="/personas"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                :class="{
+                  'bg-gray-700 text-white':
+                    navigationStore.activeLink === '/personas',
+                }"
+                :aria-current="
+                  navigationStore.activeLink === '/personas'
+                    ? 'page'
+                    : undefined
+                "
                 >Personas</a
               >
               <a
-                href="#"
+                href="/account"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                :class="{
+                  'bg-gray-700 text-white':
+                    navigationStore.activeLink === '/account',
+                }"
+                :aria-current="
+                  navigationStore.activeLink === '/account' ? 'page' : undefined
+                "
                 >Account</a
               >
               <a
-                href="#"
+                href="javascript:;"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 @click="logout"
                 >Sign out</a
@@ -288,9 +326,11 @@
 
 <script setup lang="ts">
 import { useAuthStore } from '../stores/auth.store';
+import { useNavigationStore } from '../stores/navigation.store';
 import { useUserStore } from '../stores/user.store';
 const authStore = useAuthStore();
 const userStore = useUserStore();
+const navigationStore = useNavigationStore();
 
 const logout = () => {
   authStore.logout();

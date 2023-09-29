@@ -25,7 +25,7 @@ export const useAuthStore = defineStore('authStore', {
       this.user = user.data;
       localStorage.setItem('user', JSON.stringify(user.data));
       console.log(user);
-      router.push('/chat');
+      router.push('/home');
     },
     logout() {
       this.user = null;

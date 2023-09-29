@@ -18,7 +18,7 @@
           </span>
           <input
             type="search"
-            class="block w-full py-2 pl-10 bg-gray-100 rounded outline-none"
+            class="block w-full py-2 pl-10 bg-gray-100 text-black rounded outline-none"
             name="search"
             placeholder="Search"
             required
@@ -30,25 +30,27 @@
         <h2 class="my-2 mb-2 ml-2 text-lg text-gray-200">Chats</h2>
         <li>
           <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer hover:bg-primary-light focus:outline-none"
+            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer bg-primary hover:bg-primary-light focus:outline-none"
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
+              src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
               alt="username"
             />
             <div class="w-full pb-2">
               <div class="flex justify-between">
                 <span class="block ml-2 font-semibold text-gray-200"
-                  >John Doe</span
-                >
+                  >King Henry VIII
+                </span>
                 <span class="block ml-2 text-sm text-gray-200">25 minutes</span>
               </div>
-              <span class="block ml-2 text-sm text-gray-200">bye</span>
+              <span class="block ml-2 text-sm text-gray-200"
+                >Indeed, it is true, my inquisitive subject...</span
+              >
             </div>
           </a>
           <a
-            class="flex items-center px-3 py-2 text-sm transition hover:bg-primary-light duration-150 ease-in-out bg-primary cursor-pointer focus:outline-none"
+            class="flex items-center px-3 py-2 text-sm transition hover:bg-primary-light duration-150 ease-in-out cursor-pointer focus:outline-none"
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
@@ -83,14 +85,16 @@
       </ul>
     </div>
     <div class="hidden lg:col-span-2 lg:block">
-      <div class="w-full bg-[#172034]">
+      <div class="w-full bg-[#182234]">
         <div class="relative flex items-center p-3 border-b border-gray-300">
           <img
             class="object-cover w-10 h-10 rounded-full"
-            src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
+            src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
             alt="username"
           />
-          <span class="block ml-2 font-bold text-gray-200">Emma</span>
+          <span class="block ml-2 font-bold text-gray-200"
+            >King Henry VIII</span
+          >
           <span
             class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"
           >
@@ -102,21 +106,44 @@
               <div
                 class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
               >
-                <span class="block">Hi</span>
+                <span class="block"
+                  >Greetings, good subject! Pray tell, what dost thou seek from
+                  the royal court of King Henry the 8th? Speak thy mind, and I
+                  shall endeavor to respond in a manner befitting my regal
+                  stature</span
+                >
               </div>
             </li>
             <li class="flex justify-end">
               <div
                 class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
               >
-                <span class="block">Hiiii</span>
+                <span class="block">Which of your wives did you kill?</span>
+              </div>
+            </li>
+
+            <li class="flex justify-start">
+              <div
+                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
+              >
+                <span class="block"
+                  >Ah, thou referest to my unfortunate past and the fates of my
+                  six marriages. 'Tis true, two of my wives, Anne Boleyn and
+                  Catherine Howard, did meet tragic ends. They were accused of
+                  treason and infidelity, and sadly, they were executed during
+                  my reign. It was a time of tumult and difficult decisions, and
+                  history shall forever remember these events.
+                </span>
               </div>
             </li>
             <li class="flex justify-end">
               <div
                 class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
               >
-                <span class="block">how are you?</span>
+                <span class="block"
+                  >Is it true you inveted the church of england just so you
+                  could get divorced?</span
+                >
               </div>
             </li>
             <li class="flex justify-start">
@@ -124,32 +151,15 @@
                 class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
               >
                 <span class="block"
-                  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Iusto excepturi assumenda esse quia expedita, eum aliquid
-                  consequatur neque asperiores, illum provident velit eos quidem
-                  debitis sequi eligendi quisquam aperiam? Cum ratione ipsa
-                  expedita explicabo libero praesentium animi numquam beatae!
-                  Dicta reiciendis itaque provident. Incidunt architecto fugiat
-                  quasi aperiam facilis similique, quia nisi consequuntur minus,
-                  explicabo deleniti velit quos eos obcaecati minima vel omnis
-                  molestiae? Laudantium, repudiandae, doloribus asperiores,
-                  magni quasi tenetur exercitationem consequuntur voluptas omnis
-                  nostrum totam dicta? Id similique corporis corrupti inventore
-                  reprehenderit quos earum, molestiae est exercitationem
-                  molestias aliquid, tempora dolor, dolorem officia eaque!
-                  Reprehenderit quasi libero facere iusto debitis laudantium
-                  maiores nostrum quis velit ipsa reiciendis, at, incidunt nemo?
-                  Asperiores porro autem debitis, maxime ipsum unde repellat
-                  amet inventore tempore fuga nisi. Cumque quia modi sint,
-                  beatae a laboriosam explicabo quos autem, asperiores culpa
-                  iusto nulla perferendis sit non? Ab ut adipisci, sint neque
-                  dolorum, excepturi accusantium unde distinctio sapiente nam
-                  libero, commodi nobis quia corporis! Vel blanditiis deleniti
-                  architecto repellendus assumenda perspiciatis enim labore
-                  nulla. Debitis ratione veniam saepe eligendi? Quasi, aliquid?
-                  Nisi qui quae commodi non, cumque officia quas illum
-                  aspernatur fugiat numquam? Natus minima laboriosam blanditiis
-                  rerum quis. Neque exercitationem nemo adipisci iste accusamus.
+                  >Indeed, it is true, my inquisitive subject. The formation of
+                  the Church of England, or the Anglican Church, was indeed a
+                  consequential step in my efforts to secure an annulment from
+                  my first marriage to Catherine of Aragon. The authority of the
+                  Pope in Rome posed a challenge to my desires, and thus, the
+                  Church of England was established with the monarch as its
+                  head, allowing for greater control over matters of marriage
+                  and divorce. This decision had far-reaching consequences for
+                  both religious and political realms in England's history
                 </span>
               </div>
             </li>
@@ -183,7 +193,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useNavigationStore } from '../stores/navigation.store';
+const naviagtionStore = useNavigationStore();
+naviagtionStore.setActivePage('/chat');
+</script>
 
 <style>
 .scroll-bar::-webkit-scrollbar-track {
