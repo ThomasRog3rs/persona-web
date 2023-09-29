@@ -40,7 +40,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/communities',
-    name: 'Chat',
+    name: 'Communities',
     component: () => import('../views/NotFound.vue'),
   },
 ];
