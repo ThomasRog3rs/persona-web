@@ -110,7 +110,7 @@ const schema = Yup.object().shape({
   password: Yup.string().required('Password is required'),
 });
 
-const onSubmit = async (values: any, { setErrors }) => {
+const onSubmit = async (values: any, { setErrors }: any) => {
   const { email, password } = values;
 
   try {
@@ -118,7 +118,7 @@ const onSubmit = async (values: any, { setErrors }) => {
   } catch (error: any) {
     console.log('error: ', error);
     setErrors({
-      apiError: `Sign up failed: ${error.message}`,
+      apiError: `${error.response.data.errors[0].message}`,
     });
   }
 };
