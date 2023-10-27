@@ -102,93 +102,10 @@
         </div>
         <div class="relative w-full p-6 overflow-y-auto h-[40rem] scroll-bar">
           <ul class="space-y-2">
-            <li class="flex justify-start">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
-              >
-                <span class="block"
-                  >Greetings, good subject! Pray tell, what dost thou seek from
-                  the royal court of King Henry the 8th? Speak thy mind, and I
-                  shall endeavor to respond in a manner befitting my regal
-                  stature</span
-                >
-              </div>
-            </li>
-            <li class="flex justify-end">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
-              >
-                <span class="block">Which of your wives did you kill?</span>
-              </div>
-            </li>
-
-            <li class="flex justify-start">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
-              >
-                <span class="block"
-                  >Ah, thou referest to my unfortunate past and the fates of my
-                  six marriages. 'Tis true, two of my wives, Anne Boleyn and
-                  Catherine Howard, did meet tragic ends. They were accused of
-                  treason and infidelity, and sadly, they were executed during
-                  my reign. It was a time of tumult and difficult decisions, and
-                  history shall forever remember these events.
-                </span>
-              </div>
-            </li>
-            <li class="flex justify-end">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
-              >
-                <span class="block"
-                  >Is it true you inveted the church of england just so you
-                  could get divorced?</span
-                >
-              </div>
-            </li>
-            <li class="flex justify-start">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
-              >
-                <span class="block"
-                  >Indeed, it is true, my inquisitive subject. The formation of
-                  the Church of England, or the Anglican Church, was indeed a
-                  consequential step in my efforts to secure an annulment from
-                  my first marriage to Catherine of Aragon. The authority of the
-                  Pope in Rome posed a challenge to my desires, and thus, the
-                  Church of England was established with the monarch as its
-                  head, allowing for greater control over matters of marriage
-                  and divorce. This decision had far-reaching consequences for
-                  both religious and political realms in England's history
-                </span>
-              </div>
-            </li>
-            <li class="flex justify-end">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
-              >
-                <span class="block"
-                  >are you aware you are one of the most hated and feared kings
-                  in english history?</span
-                >
-              </div>
-            </li>
-            <li class="flex justify-start">
-              <div
-                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
-              >
-                <span class="block"
-                  >Aye, I am well aware that my reign evokes a range of emotions
-                  in the annals of history. Some regard me as a formidable ruler
-                  who reshaped the course of England's destiny, while others
-                  indeed hold disdain for the tumultuous events and decisions
-                  that marked my time on the throne. The passions of history are
-                  oftentimes mixed, and I, King Henry the 8th, stand as a figure
-                  of both admiration and controversy in the tapestry of
-                  England's past.
-                </span>
-              </div>
-            </li>
+            <ChatBubble
+              v-for="message in messages"
+              :props="message"
+            ></ChatBubble>
           </ul>
         </div>
 
@@ -196,12 +113,13 @@
           <input
             type="text"
             placeholder="Message"
-            class="block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-lg outline-none focus:text-gray-700"
+            class="block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-lg outline-none text-gray-700"
             name="message"
+            v-model="messageContent"
             required
           />
 
-          <button type="submit">
+          <button type="submit" @click="postMessage">
             <svg
               class="w-5 h-5 text-gray-200 origin-center transform rotate-90"
               xmlns="http://www.w3.org/2000/svg"
@@ -220,9 +138,61 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
+import { ChatBubbleProps } from '../types/ChatBubbleProps';
+import ChatBubble from '../components/ChatBubble.vue';
 import { useNavigationStore } from '../stores/navigation.store';
+
+//#region Chat message (Needs to come from API)
+const chatMessage: ChatBubbleProps = {
+  isUser: false,
+  message:
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat alias laudantium rem quibusdam quod labore. Ut officiis ipsam fugiat vero autem veritatis id consequatur!',
+};
+const messages = ref<ChatBubbleProps[]>([chatMessage]);
+//#endregion
+
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/chat');
+
+const messageContent = ref<string>();
+const postMessage = () => {
+  //This should post to the API
+  if (messageContent.value == undefined || messageContent.value === '') return;
+  const chatMessage: ChatBubbleProps = {
+    isUser: true,
+    message: messageContent.value,
+  };
+  messages.value.push(chatMessage);
+  messageContent.value = '';
+};
+
+const handlePostMessageHotKey = (e: any) => {
+  if (e.keyCode == 13) {
+    postMessage();
+  }
+};
+
+onMounted(async () => {
+  document.addEventListener('keydown', handlePostMessageHotKey);
+  //#region DUMMY MESSAGE DATA (Needs to come from the API)
+  for (let i = 0; i < 6; i++) {
+    const isUser = i % 2 === 0; // Alternating between true and false
+    const messageText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat alias laudantium rem quibusdam quod labore. Ut officiis ipsam fugiat vero autem veritatis id consequatur!`;
+
+    const chatMessage: ChatBubbleProps = {
+      isUser,
+      message: messageText,
+    };
+
+    messages.value.push(chatMessage);
+  }
+  //#endregion
+});
+
+onUnmounted(async () => {
+  document.removeEventListener('keydown', handlePostMessageHotKey);
+});
 </script>
 
 <style>
