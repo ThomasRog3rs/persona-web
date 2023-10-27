@@ -4,148 +4,28 @@
       Trending Personas
     </h1>
     <div class="flex">
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3 overflow-hidden shadow-lg bg-slate-800"
-      >
-        <img
-          class="w-full"
-          src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-md mb-2">King Henry VIII</div>
-          <p class="text-gray-300 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#History</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Education</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Other</a
-          >
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3 rounded overflow-hidden shadow-lg bg-slate-800"
-      >
-        <img
-          class="w-full"
-          src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-md mb-2">King Henry VIII</div>
-          <p class="text-gray-300 text-base text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#History</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Education</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Other</a
-          >
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3 rounded overflow-hidden shadow-lg bg-slate-800"
-      >
-        <img
-          class="w-full"
-          src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-md mb-2">King Henry VIII</div>
-          <p class="text-gray-300 text-base text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#History</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Education</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Other</a
-          >
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3 rounded overflow-hidden shadow-lg bg-slate-800"
-      >
-        <img
-          class="w-full"
-          src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-md mb-2">King Henry VIII</div>
-          <p class="text-gray-300 text-base text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#History</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Education</a
-          >
-          <a
-            href="#"
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#Other</a
-          >
-        </div>
-      </div>
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import PersonaCard from '../components/PersonaCard.vue';
 import { useNavigationStore } from '../stores/navigation.store';
+import { PersonaCardProps } from '../types/PersonaCardProps';
+
+const myPersona: PersonaCardProps = {
+  personaName: 'King Henry VIII',
+  personaId: 1,
+  personaImgUrl:
+    'https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639',
+  personaTags: ['History', 'Education', 'Other'],
+  personaDescription:
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat alias laudantium rem quibusdam quod labore. Ut officiis ipsam fugiat vero autem veritatis id consequatur!',
+};
 
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/home');
