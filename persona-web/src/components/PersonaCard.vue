@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full lg:w-1/4 bg-transparent rounded-lg my-3 lg:mx-3 overflow-hidden shadow-lg bg-slate-800 border"
+    class="w-full bg-transparent rounded-lg my-3 lg:mx-3 overflow-hidden shadow-lg bg-slate-800 border"
   >
     <img
       class="w-full"

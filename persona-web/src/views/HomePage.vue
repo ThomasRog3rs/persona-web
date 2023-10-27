@@ -3,12 +3,18 @@
     <h1 class="text-3xl text-gray-100 font-bold mb-5 ml-3">
       Trending Personas
     </h1>
-    <div class="flex">
+    <div class="grid grid-cols-4 gap-5 pr-5">
       <PersonaCard :props="myPersona"></PersonaCard>
       <PersonaCard :props="myPersona"></PersonaCard>
       <PersonaCard :props="myPersona"></PersonaCard>
       <PersonaCard :props="myPersona"></PersonaCard>
     </div>
+    <!-- <div class="grid col-span-3 gap-4">
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
+      <PersonaCard :props="myPersona"></PersonaCard>
+    </div> -->
   </div>
 </template>
 
