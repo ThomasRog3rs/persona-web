@@ -100,7 +100,10 @@
           >
           </span>
         </div>
-        <div class="relative w-full p-6 overflow-y-auto h-[40rem] scroll-bar">
+        <div
+          ref="chatContainer"
+          class="relative w-full p-6 overflow-y-auto h-[40rem] scroll-bar"
+        >
           <ul class="space-y-2">
             <ChatBubble
               v-for="message in messages"
@@ -155,6 +158,8 @@ const messages = ref<ChatBubbleProps[]>([chatMessage]);
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/chat');
 
+const chatContainer = ref();
+
 const messageContent = ref<string>();
 const postMessage = () => {
   //This should post to the API
@@ -165,6 +170,8 @@ const postMessage = () => {
   };
   messages.value.push(chatMessage);
   messageContent.value = '';
+
+  scrollChatToBottom();
 };
 
 const handlePostMessageHotKey = (e: any) => {
@@ -173,8 +180,18 @@ const handlePostMessageHotKey = (e: any) => {
   }
 };
 
+const scrollChatToBottom = () => {
+  const container = chatContainer.value;
+  if (container != null) {
+    setTimeout(() => {
+      container.scrollTo(0, container.scrollHeight);
+    }, 1);
+  }
+};
+
 onMounted(async () => {
   document.addEventListener('keydown', handlePostMessageHotKey);
+  scrollChatToBottom();
   //#region DUMMY MESSAGE DATA (Needs to come from the API)
   for (let i = 0; i < 6; i++) {
     const isUser = i % 2 === 0; // Alternating between true and false
