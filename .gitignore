@@ -1,0 +1,5 @@
+# Ignore the dist directory (built files)
+/dist
+
+# Ignore the node_modules directory (installed dependencies)
+/node_modules

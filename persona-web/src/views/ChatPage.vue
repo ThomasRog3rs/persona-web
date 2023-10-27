@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-[#1d2840] min-w-full lg:grid lg:grid-cols-3">
-    <div class="lg:col-span-1">
+  <div class="min-w-full lg:grid lg:grid-cols-3">
+    <div class="bg-[#1d2840] lg:col-span-1">
       <div class="mx-3 my-3">
         <div class="relative text-gray-200">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -85,7 +85,7 @@
       </ul>
     </div>
     <div class="hidden lg:col-span-2 lg:block">
-      <div class="w-full bg-[#182234]">
+      <div class="w-full">
         <div class="relative flex items-center p-3 border-b border-gray-300">
           <img
             class="object-cover w-10 h-10 rounded-full"
@@ -163,10 +163,36 @@
                 </span>
               </div>
             </li>
+            <li class="flex justify-end">
+              <div
+                class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded-lg shadow"
+              >
+                <span class="block"
+                  >are you aware you are one of the most hated and feared kings
+                  in english history?</span
+                >
+              </div>
+            </li>
+            <li class="flex justify-start">
+              <div
+                class="relative max-w-xl px-4 py-2 text-gray-100 bg-primary-light rounded-lg shadow"
+              >
+                <span class="block"
+                  >Aye, I am well aware that my reign evokes a range of emotions
+                  in the annals of history. Some regard me as a formidable ruler
+                  who reshaped the course of England's destiny, while others
+                  indeed hold disdain for the tumultuous events and decisions
+                  that marked my time on the throne. The passions of history are
+                  oftentimes mixed, and I, King Henry the 8th, stand as a figure
+                  of both admiration and controversy in the tapestry of
+                  England's past.
+                </span>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div class="flex items-center justify-between w-full p-3 bg-[#111827]">
+        <div class="flex items-center justify-between w-full p-3 bg-[#172034]">
           <input
             type="text"
             placeholder="Message"

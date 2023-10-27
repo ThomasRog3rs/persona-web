@@ -39,7 +39,7 @@
                 "
                 >Chats</a
               >
-              <a
+              <!-- <a
                 href="/communities"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 :class="{
@@ -52,8 +52,8 @@
                     : undefined
                 "
                 >Communites</a
-              >
-              <a
+              > -->
+              <!-- <a
                 href="/personas"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 :class="{
@@ -66,7 +66,7 @@
                     : undefined
                 "
                 >Personas</a
-              >
+              > -->
               <a
                 href="/account"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
