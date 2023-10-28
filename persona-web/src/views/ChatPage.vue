@@ -34,13 +34,13 @@
           >
             <img
               class="object-cover w-10 h-10 rounded-full"
-              src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
+              :src="chatStore.currentBot?.imageUrl"
               alt="username"
             />
             <div class="w-full pb-2">
               <div class="flex justify-between">
                 <span class="block ml-2 font-semibold text-gray-200"
-                  >King Henry VIII
+                  >{{ chatStore.currentBot?.name }}
                 </span>
                 <span class="block ml-2 text-sm text-gray-200">25 minutes</span>
               </div>
@@ -89,12 +89,12 @@
         <div class="relative flex items-center p-3 border-b border-gray-300">
           <img
             class="object-cover w-10 h-10 rounded-full"
-            src="https://images.immediate.co.uk/production/volatile/sites/7/2018/01/Henry-VIII_GettyImages-53313077-995ecdb.jpg?quality=45&resize=960,639"
+            :src="chatStore.currentBot?.imageUrl"
             alt="username"
           />
-          <span class="block ml-2 font-bold text-gray-200"
-            >King Henry VIII</span
-          >
+          <span class="block ml-2 font-bold text-gray-200">{{
+            chatStore.currentBot?.name
+          }}</span>
           <span
             class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"
           >
@@ -106,7 +106,7 @@
         >
           <ul class="space-y-2">
             <ChatBubble
-              v-for="message in messages"
+              v-for="message in chatStore.messages"
               :props="message"
             ></ChatBubble>
           </ul>
@@ -145,32 +145,24 @@ import { onMounted, onUnmounted, ref } from 'vue';
 import { ChatBubbleProps } from '../types/ChatBubbleProps';
 import ChatBubble from '../components/ChatBubble.vue';
 import { useNavigationStore } from '../stores/navigation.store';
-
-//#region Chat message (Needs to come from API)
-const chatMessage: ChatBubbleProps = {
-  isUser: false,
-  message:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat alias laudantium rem quibusdam quod labore. Ut officiis ipsam fugiat vero autem veritatis id consequatur!',
-};
-const messages = ref<ChatBubbleProps[]>([chatMessage]);
-//#endregion
+import { useChatStore } from '../stores/chat.store';
+import { BotInfo } from '../types/BotInterface.ts';
 
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/chat');
 
+const chatStore = useChatStore();
 const chatContainer = ref();
 
 const messageContent = ref<string>();
 const postMessage = () => {
-  //This should post to the API
   if (messageContent.value == undefined || messageContent.value === '') return;
   const chatMessage: ChatBubbleProps = {
     isUser: true,
     message: messageContent.value,
   };
-  messages.value.push(chatMessage);
+  chatStore.addMessage(chatMessage);
   messageContent.value = '';
-
   scrollChatToBottom();
 };
 
@@ -190,21 +182,15 @@ const scrollChatToBottom = () => {
 };
 
 onMounted(async () => {
+  const botInfo: BotInfo = {
+    name: 'Dave',
+    imageUrl:
+      'https://learnyzen.com/wp-content/uploads/2017/08/test1-481x385.png',
+    id: 1,
+  };
+  chatStore.setCurrentBot(botInfo);
   document.addEventListener('keydown', handlePostMessageHotKey);
   scrollChatToBottom();
-  //#region DUMMY MESSAGE DATA (Needs to come from the API)
-  for (let i = 0; i < 6; i++) {
-    const isUser = i % 2 === 0; // Alternating between true and false
-    const messageText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat alias laudantium rem quibusdam quod labore. Ut officiis ipsam fugiat vero autem veritatis id consequatur!`;
-
-    const chatMessage: ChatBubbleProps = {
-      isUser,
-      message: messageText,
-    };
-
-    messages.value.push(chatMessage);
-  }
-  //#endregion
 });
 
 onUnmounted(async () => {
