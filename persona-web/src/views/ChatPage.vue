@@ -21,7 +21,7 @@
             class="block w-full py-2 pl-10 bg-gray-100 text-black rounded outline-none"
             name="search"
             placeholder="Search"
-            required
+            v-model="searchInput"
           />
         </div>
       </div>
@@ -30,7 +30,7 @@
         <h2 class="my-2 mb-2 ml-2 text-lg text-gray-200">Chats</h2>
         <li>
           <ChatBotLink
-            v-for="bot in botStore.availableBots"
+            v-for="bot in filteredBots"
             :props="bot"
             :key="bot.id"
           ></ChatBotLink>
@@ -94,7 +94,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, computed } from 'vue';
 import { ChatBubbleProps } from '../types/ChatBubbleProps';
 import ChatBubble from '../components/ChatBubble.vue';
 import { useNavigationStore } from '../stores/navigation.store';
@@ -108,8 +108,10 @@ naviagtionStore.setActivePage('/chat');
 const chatStore = useChatStore();
 const botStore = useBotStore();
 const chatContainer = ref();
+const searchInput = ref<string>();
 
 const messageContent = ref<string>();
+
 const postMessage = () => {
   if (messageContent.value == undefined || messageContent.value === '') return;
   const chatMessage: ChatBubbleProps = {
@@ -121,7 +123,18 @@ const postMessage = () => {
   scrollChatToBottom();
 };
 
-const handlePostMessageHotKey = (e: any) => {
+const filteredBots: any = computed(() => {
+  const searchTerm = searchInput.value?.trim().toLowerCase();
+  if (!searchTerm) {
+    return botStore.availableBots;
+  } else {
+    return botStore.availableBots?.filter((bot) =>
+      bot.name.toLowerCase().includes(searchTerm)
+    );
+  }
+});
+
+const handleHotKey = (e: any) => {
   if (e.keyCode == 13) {
     postMessage();
   }
@@ -139,12 +152,12 @@ const scrollChatToBottom = () => {
 onMounted(async () => {
   botStore.getAvailableBots();
   botStore.setCurrentBot(1);
-  document.addEventListener('keydown', handlePostMessageHotKey);
+  document.addEventListener('keydown', handleHotKey);
   scrollChatToBottom();
 });
 
 onUnmounted(async () => {
-  document.removeEventListener('keydown', handlePostMessageHotKey);
+  document.removeEventListener('keydown', handleHotKey);
 });
 </script>
 
