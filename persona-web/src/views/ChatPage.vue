@@ -29,58 +29,11 @@
       <ul class="overflow-auto h-[32rem]">
         <h2 class="my-2 mb-2 ml-2 text-lg text-gray-200">Chats</h2>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer bg-primary hover:bg-primary-light focus:outline-none"
-          >
-            <img
-              class="object-cover w-10 h-10 rounded-full"
-              :src="chatStore.currentBot?.imageUrl"
-              alt="username"
-            />
-            <div class="w-full pb-2">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-200"
-                  >{{ chatStore.currentBot?.name }}
-                </span>
-                <span class="block ml-2 text-sm text-gray-200">25 minutes</span>
-              </div>
-              <span class="block ml-2 text-sm text-gray-200"
-                >Indeed, it is true, my inquisitive subject...</span
-              >
-            </div>
-          </a>
-          <a
-            class="flex items-center px-3 py-2 text-sm transition hover:bg-primary-light duration-150 ease-in-out cursor-pointer focus:outline-none"
-          >
-            <img
-              class="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128__340.png"
-              alt="username"
-            />
-            <div class="w-full pb-2">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-200">Sam</span>
-                <span class="block ml-2 text-sm text-gray-200">50 minutes</span>
-              </div>
-              <span class="block ml-2 text-sm text-gray-200">Good night</span>
-            </div>
-          </a>
-          <a
-            class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out cursor-pointer hover:bg-primary-light focus:outline-none"
-          >
-            <img
-              class="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
-              alt="username"
-            />
-            <div class="w-full pb-2">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-200">Emma</span>
-                <span class="block ml-2 text-sm text-gray-200">6 hour</span>
-              </div>
-              <span class="block ml-2 text-sm text-gray-200">Good Morning</span>
-            </div>
-          </a>
+          <ChatBotLink
+            v-for="bot in botStore.availableBots"
+            :props="bot"
+            :key="bot.id"
+          ></ChatBotLink>
         </li>
       </ul>
     </div>
@@ -89,11 +42,11 @@
         <div class="relative flex items-center p-3 border-b border-gray-300">
           <img
             class="object-cover w-10 h-10 rounded-full"
-            :src="chatStore.currentBot?.imageUrl"
+            :src="botStore.currentBot?.imageUrl"
             alt="username"
           />
           <span class="block ml-2 font-bold text-gray-200">{{
-            chatStore.currentBot?.name
+            botStore.currentBot?.name
           }}</span>
           <span
             class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"
@@ -146,12 +99,14 @@ import { ChatBubbleProps } from '../types/ChatBubbleProps';
 import ChatBubble from '../components/ChatBubble.vue';
 import { useNavigationStore } from '../stores/navigation.store';
 import { useChatStore } from '../stores/chat.store';
-import { BotInfo } from '../types/BotInterface.ts';
+import { useBotStore } from '../stores/bot.store';
+import ChatBotLink from '../components/ChatBotLink.vue';
 
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/chat');
 
 const chatStore = useChatStore();
+const botStore = useBotStore();
 const chatContainer = ref();
 
 const messageContent = ref<string>();
@@ -182,13 +137,8 @@ const scrollChatToBottom = () => {
 };
 
 onMounted(async () => {
-  const botInfo: BotInfo = {
-    name: 'Dave',
-    imageUrl:
-      'https://learnyzen.com/wp-content/uploads/2017/08/test1-481x385.png',
-    id: 1,
-  };
-  chatStore.setCurrentBot(botInfo);
+  botStore.getAvailableBots();
+  botStore.setCurrentBot(1);
   document.addEventListener('keydown', handlePostMessageHotKey);
   scrollChatToBottom();
 });

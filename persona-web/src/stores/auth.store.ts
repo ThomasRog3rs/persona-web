@@ -9,7 +9,7 @@ export const useAuthStore = defineStore('authStore', {
   }),
   actions: {
     async register(email: string, password: string) {
-      const res = await axios.post('https://localhost:55309/Account/sign-up', {
+      const res = await axios.post('https://localhost:51612/Account/sign-up', {
         email,
         password,
       });
@@ -17,7 +17,7 @@ export const useAuthStore = defineStore('authStore', {
       router.push('/login');
     },
     async login(email: string, password: string) {
-      const user = await axios.post('https://localhost:55309/Account/sign-in', {
+      const user = await axios.post('https://localhost:51612/Account/sign-in', {
         email,
         password,
       });
