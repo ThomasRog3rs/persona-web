@@ -6,11 +6,13 @@
     <main class="mx-auto">
       <router-view></router-view>
     </main>
+    <CreatePersonaModal></CreatePersonaModal>
   </div>
 </template>
 
 <script setup lang="ts">
 import AuthNavBar from '../components/AuthNavBar.vue';
+import CreatePersonaModal from '../components/CreatePersonaModal.vue';
 
 import { onBeforeMount } from 'vue';
 

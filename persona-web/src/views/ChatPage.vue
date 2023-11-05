@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-full lg:grid lg:grid-cols-3">
+  <div class="min-w-full lg:grid lg:grid-cols-3 filter">
     <div class="bg-[#1d2840] lg:col-span-1">
       <div class="mx-3 my-3">
         <div class="relative text-gray-200">
@@ -101,12 +101,16 @@ import { useNavigationStore } from '../stores/navigation.store';
 import { useChatStore } from '../stores/chat.store';
 import { useBotStore } from '../stores/bot.store';
 import ChatBotLink from '../components/ChatBotLink.vue';
+// import CreatePersonaModal from '../components/CreatePersonaModal.vue';
+// import { useCreatePersonaStore } from '../stores/createPersona.store';
 
 const naviagtionStore = useNavigationStore();
 naviagtionStore.setActivePage('/chat');
 
 const chatStore = useChatStore();
 const botStore = useBotStore();
+// const createPersonaStore = useCreatePersonaStore();
+
 const chatContainer = ref();
 const searchInput = ref<string>();
 

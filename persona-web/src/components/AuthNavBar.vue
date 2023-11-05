@@ -96,6 +96,7 @@
             <button
               type="button"
               class="text-white bg-primary hover:bg-primary-light focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-3 dark:bg-primary dark:hover:bg-primary-light"
+              @click="createPersonaStore.isModalOpen = true"
             >
               <span>&plus;</span> New Persona
             </button>
@@ -328,8 +329,11 @@
 import { useAuthStore } from '../stores/auth.store';
 import { useNavigationStore } from '../stores/navigation.store';
 import { useUserStore } from '../stores/user.store';
+import { useCreatePersonaStore } from '../stores/createPersona.store';
+
 const authStore = useAuthStore();
 const userStore = useUserStore();
+const createPersonaStore = useCreatePersonaStore();
 const navigationStore = useNavigationStore();
 
 const logout = () => {
