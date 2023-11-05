@@ -15,8 +15,8 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="/home"
+              <router-link
+                to="/home"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 :class="{
                   'bg-gray-700 text-white':
@@ -25,10 +25,10 @@
                 :aria-current="
                   navigationStore.activeLink === '/home' ? 'page' : undefined
                 "
-                >Home</a
+                >Home</router-link
               >
-              <a
-                href="/chat"
+              <router-link
+                to="/chat"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 :class="{
                   'bg-gray-700 text-white':
@@ -37,7 +37,7 @@
                 :aria-current="
                   navigationStore.activeLink === '/chat' ? 'page' : undefined
                 "
-                >Chats</a
+                >Chats</router-link
               >
               <!-- <a
                 href="/communities"
@@ -67,8 +67,8 @@
                 "
                 >Personas</a
               > -->
-              <a
-                href="/account"
+              <router-link
+                to="/account"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 :class="{
                   'bg-gray-700 text-white':
@@ -77,14 +77,14 @@
                 :aria-current="
                   navigationStore.activeLink === '/account' ? 'page' : undefined
                 "
-                >Account</a
+                >Account</router-link
               >
-              <a
-                href="javascript:;"
+              <button
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 @click="logout"
-                >Sign out</a
               >
+                Sign out
+              </button>
             </div>
           </div>
         </div>

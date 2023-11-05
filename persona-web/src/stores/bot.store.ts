@@ -43,7 +43,20 @@ export const useBotStore = defineStore(
       ];
     }
 
-    return { currentBot, availableBots, getAvailableBots, setCurrentBot };
+    function addBot(bot: BotInfo) {
+      //post to API
+      if (bot) {
+        availableBots.value?.push(bot);
+      }
+    }
+
+    return {
+      currentBot,
+      availableBots,
+      getAvailableBots,
+      setCurrentBot,
+      addBot,
+    };
   },
   { persist: true }
 );
