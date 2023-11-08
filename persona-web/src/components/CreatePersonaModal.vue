@@ -188,7 +188,7 @@
 
 <script setup lang="ts">
 import * as Yup from 'yup';
-import { Form, Field, useResetForm } from 'vee-validate';
+import { Form, Field } from 'vee-validate';
 import { BotInfo } from '../types/BotInterface';
 
 import { useCreatePersonaStore } from '../stores/createPersona.store';

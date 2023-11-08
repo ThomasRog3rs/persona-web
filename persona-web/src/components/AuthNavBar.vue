@@ -91,7 +91,7 @@
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <div class="text-white text-sm font-thin px-4">
-              <p>Welcome, {{ userStore.userDetails?.email }}</p>
+              <p>Welcome, {{ authStore.user?.email }}</p>
             </div>
             <button
               type="button"
@@ -335,6 +335,9 @@ const authStore = useAuthStore();
 const userStore = useUserStore();
 const createPersonaStore = useCreatePersonaStore();
 const navigationStore = useNavigationStore();
+
+console.log(authStore.user);
+console.log(userStore.userDetails);
 
 const logout = () => {
   authStore.logout();
